@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DocsHub</string>
+    <string name="search_bar">Search</string>
+    <string name="uploadNewDocument">Upload New Document</string>
+    <string name="add_document">Add Document</string>
+    <string name="go_all_in">GO ALL IN SECURE WITH</string>
+    <string name="welcome_image">Welcome Image</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="already_have_an_account_then">Already have an account, then</string>
+    <string name="if_you_are_new_to_docsHub_then">If you are new to DocsHub, then</string>
+</resources>
