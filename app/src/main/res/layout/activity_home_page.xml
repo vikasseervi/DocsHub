@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/google_grey"
+    android:background="@color/black"
     tools:context=".HomePage">
 
     <Button
@@ -12,7 +12,6 @@
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="@color/search_bar"
         android:backgroundTintMode="screen"
@@ -35,60 +34,66 @@
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
 
-    <ImageButton
-        android:id="@+id/addDocument"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:background="@color/black"
-        android:backgroundTint="@color/google_grey"
-        android:baselineAlignBottom="false"
-        android:contentDescription="@string/add_document"
-        android:fadingEdge="horizontal"
-        android:scaleType="center"
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:background="@color/search_bar"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@color/folder_grey"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SearchBar"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/add_75" />
+        app:layout_constraintVertical_bias="0.998"
+        tools:visibility="visible">
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/google_grey"
-        android:contentDescription="@string/send_document"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/addDocument"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/icons8_topic_48" />
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/black"
+            android:backgroundTint="@color/black"
+            android:contentDescription="@string/send_document"
+            android:visibility="visible"
+            app:srcCompat="@drawable/topicblue_48" />
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/black"
-        android:backgroundTint="@color/google_grey"
-        android:contentDescription="@string/folder"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/addDocument"
-        app:srcCompat="@drawable/folder_48" />
+        <ImageButton
+            android:id="@+id/addDocument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:backgroundTint="@color/black"
+            android:baselineAlignBottom="false"
+            android:contentDescription="@string/add_document"
+            android:fadingEdge="horizontal"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:scaleType="center"
+            app:srcCompat="@drawable/addblue_75" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:backgroundTint="@color/black"
+            android:contentDescription="@string/folder"
+            android:visibility="visible"
+            app:srcCompat="@drawable/folderblue_48" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
