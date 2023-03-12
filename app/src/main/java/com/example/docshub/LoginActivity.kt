@@ -23,8 +23,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun validateInput(): Boolean {
-        if (etUsername.text.toString() == "onyx333" && etPassword.text.toString() == "onyx333") {
-            etUsername.error = "Please Enter Valid Username and Password"
+        if (R.id.username_editText.equals("onyx333") && R.id.password_editText.equals("onyx333") ) {
             return true
         }
         return false
