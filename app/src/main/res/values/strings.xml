@@ -15,4 +15,9 @@
     <string name="login">LOGIN</string>
     <string name="send_document">Send Document</string>
     <string name="folder">Folder</string>
+    <string name="select_file_text">Select File</string>
+    <string name="select_file_button_text">Select File</string>
+    <string name="cancel_button_text">Cancel</string>
+    <string name="upload_button">Upload File</string>
+    <string name="upload_file_button">Upload File</string>
 </resources>

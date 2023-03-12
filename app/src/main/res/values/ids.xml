@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="selected_file_textview" type="id"/>
+    <item name="download_url_textview" type="id"/>
+    <item name="upload_file_button" type="id"/>
+</resources>

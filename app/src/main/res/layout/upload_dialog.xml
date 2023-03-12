@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/file_name_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/upload_file_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/facebook_blue"
+        android:text="@string/upload_file_button"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
+
+    <Button
+        android:id="@+id/cancel_dialog_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/facebook_blue"
+        android:text="@string/cancel_button_text"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
+
+</LinearLayout>
