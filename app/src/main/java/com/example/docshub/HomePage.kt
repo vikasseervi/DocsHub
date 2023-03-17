@@ -8,10 +8,12 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.DocumentsContract
 import android.provider.OpenableColumns
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.storage.FirebaseStorage
@@ -100,24 +102,17 @@ class HomePage : AppCompatActivity() {
         val buffer = ByteArray(inputStream!!.available())
         inputStream.read(buffer)
 
-        pdfRef.putBytes(buffer).addOnSuccessListener {
+        pdfRef.putBytes(buffer)
+            .addOnSuccessListener {
                 val downloadUrlTextView = findViewById<TextView>(R.id.download_url_textview)
                 pdfRef.downloadUrl.addOnSuccessListener { uri ->
                     downloadUrlTextView.text = uri.toString()
                 }
+                Toast.makeText(applicationContext, "File uploaded successfully", Toast.LENGTH_SHORT).show()
             }
             .addOnFailureListener { e ->
-
+                Toast.makeText(applicationContext, "Error uploading file", Toast.LENGTH_SHORT).show()
             }
     }
 }
 
-//
-//Toast.makeText(applicationContext,"this is toast message", Toast.LENGTH_SHORT).show()
-//
-//val toast = Toast.makeText(applicationContext, "Hello Javatpoint", Toast.LENGTH_SHORT)
-//toast.show()
-//
-//val myToast = Toast.makeText(applicationContext,"toast message with gravity",Toast.LENGTH_SHORT)
-//myToast.setGravity(Gravity.START,200,200)
-//myToast.show()

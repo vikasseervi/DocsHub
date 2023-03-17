@@ -19,6 +19,9 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/facebook_blue"
         android:text="@string/upload_file_button"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
 
     <Button
@@ -27,6 +30,9 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/facebook_blue"
         android:text="@string/cancel_button_text"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
 
 </LinearLayout>
